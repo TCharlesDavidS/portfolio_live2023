@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header class="homelab">
+
+        <h1 class="logo"><a href="./index.html">TCDtech.uk</a></h1>
+        <span class="hamburger">&#x2630;</span>
+        <nav class="menu">
+            <ul>
+                <li class="menu_items">
+                    <a href="./index.html#projects">PROJECTS</a>
+                    <a href="#">CONTACT</a>
+                    <a href="#"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <section class="intro">
+                <div>
+                    <h1>Homelab Project</h1>
+                    <p> 25th March 2023</p>
+                </div>
+                <div class="homelab_main_img"><img src="./images/Screenshot_32.png" alt=""></div>
+                <div class="intro_text">
+                    <h2>Introduction</h2>
+                    <p>I wanted to build a Homelab in order to host services that my family and I could use, as well as create an environment where I could learn technical skills that I can use in the workplace. I had been doing research on Homelabs and set out on my plan to set up a Homelab using old hardware that I had. Being relatively new to Homelabs, this project gave me the opportunity to dive in deep and learn a plethora of IT subjects, from VMs and containerization to networking and server maintenance.  </p>
+                </div>
+            </section>
+            <section class="hardware">
+                <h1>Hardware</h1>
+                
+                <div class="hardware_content">
+                <h2>The Server - Old PC</h2>
+                <p>
+                    <ul>
+                        <li>Corsair 32GB 3000Mhz RAM kit</li>
+                        <li>Intel i5 10400KF</li>
+                        <li>250GB SSD for Proxmox</li>
+                        <li>1TB Hard disk for ZFS storage</li>
+                    </ul>
+                </div>
+                <img class="homelab_img" src="./images/IMG20230403041005.jpg" alt="">
+                <div class="hardware_content">
+                   <h2> Pfsense Firewall - Lenovo Thinkcentre M72e </h2>
+                    <ul>
+                        <li>Intel i3-3220T</li>
+                        <li>8GB RAM</li>
+                        <li>120GB SSD</li>   
+                    </ul>
+                </div>
+                    <img class="homelab_img mini"  src="./images/s-l1600.jpg" alt="">
+                <div class="hardware_content">
+                <h2>Wireguard VPN - Racknerd.com KVM VPS</h2>
+                <ul>
+                    <li>Dual Core CPU</li>
+                    <li>512MB RAM</li>
+                </ul>   
+                </div>
+                </p>
+                <div><img src="" alt=""></div>
+            </section>
+            <section class="networking">
+                
+                <h1>Networking</h1>
+                <div class="networking_content">
+                  <h3>- Cloudflare Argo Tunnels</h3>
+                  <p>Cloudflare allows me to access my services remotely, monitor susipicious activity, restrict access via IP and add authenitcaiton to my homelab services. </p>
+                </div>
+                <div class="networking_content">
+                  <h3>- Wireguard VPN</h3>
+                  <p>Using my selfhosted Wireguard VPN and Cloudflare I can create a secure tunnel for remote access to my services when I am connected to public networks. </p>
+                </div>
+                <div class="networking_content">
+                  <h3>- Pfsense Firewall</h3>
+                  <p>I set up a Pfsense Firewall in order to control the network traffic within my home, I am planning to set up VLans on my home network for extra security. Using Pfsense as a firewall will give me the functionality I need to achieve this. </p>
+                </div>
+                <div><img src="" alt=""></div>
+            </section>
+            <section class="software">
+                <h1>Software and Services</h1>
+               
+                
+                <div class="software_text"> 
+                    
+                    <div class="software_content">
+                    <h3>- Server</h3>
+                    <div>
+                        <ul>My Proxmox hypervisor is running the following VM's:
+                            <li>Ubuntu 22.04.2 Server - DockerBuntu</li>
+                            <li>Ubuntu 22.04.1 Desktop - MinecraftBuntu</li>
+                        </ul>
+                    </div>
+                    </div>
+                    
+                    <figure class="software_content">
+                        <h3>- DockerBuntu</h3>
+                        <div class="software_wrap">
+                            <div>
+                                <p>DockerBuntu runs the majority of the services used by my family, I monitor them and run cron jobs using uptime-kuma.</p>
+                                <figcaption>Container list for DockerBuntu</figcaption>
+                            </div>
+                            <img class="homelab_img docker" src="./images/Screenshot_29.png" alt="">
+                        </div>
+                    </figure>   
+                    
+                    <figure class="software_content">
+                        <h3>- MinecraftBuntu</h3>
+                        <div class="software_wrap">
+                            <div>
+                                <p>MinecraftBuntu is running a minecraft server for me and my girlfriend, gucamole allows my girlfriend to remotely start the server when I am not around.</p>
+                                <figcaption>Container list for MinecraftBuntu</figcaption>
+                            </div>
+                            <img class="homelab_img minecraft" src="./images/Screenshot_30.png" alt="">
+                        </div>
+                    </figure>   
+                </div>
+                
+                <div><img src="" alt=""></div>
+            </section>
+        </article>
+    </main>
+
+
+
+</body>
+</html>
